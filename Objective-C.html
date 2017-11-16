@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Tin Blog">
 <meta property="og:description" content="Objective-C 擴充 NSArray 實現動態取得類別屬性, 縮減程式碼使用">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-11-16T12:29:05.682Z">
+<meta property="og:updated_time" content="2017-11-16T12:37:36.503Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Obj-C 動態取得 Class 屬性名稱 and 屬性質值">
 <meta name="twitter:description" content="Objective-C 擴充 NSArray 實現動態取得類別屬性, 縮減程式碼使用">
@@ -323,7 +323,12 @@
 <a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#import "NSArray+Extension.h"</span></span><br><span class="line"><span class="comment">#import &lt;objc/runtime.h&gt; // 導入運行時文件</span></span><br><span class="line"><span class="meta">@implementation NSArray (Extension)</span></span><br><span class="line"></span><br><span class="line">// 返回當前類別所有屬性</span><br><span class="line">+ (instancetype)getProperties:(Class)cls&#123;</span><br><span class="line"></span><br><span class="line">    // 取得當前類別所以屬性</span><br><span class="line">    unsigned int count; // 記錄屬性個數</span><br><span class="line">    objc_property_t *properties = class_copyPropertyList(cls, &amp;count);</span><br><span class="line">    //</span><br><span class="line">    NSMutableArray *mArray = [NSMutableArray array];</span><br><span class="line">    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line"></span><br><span class="line">        // An opaque type that represents an Objective-C declared property.</span><br><span class="line">        // objc_property_t 屬性類型</span><br><span class="line">        objc_property_t property = properties[i];</span><br><span class="line">        // 獲取屬性的名稱 C語言 字串</span><br><span class="line">        const char *cName = property_getName(property);</span><br><span class="line">        // 轉換為 Objective C 字串</span><br><span class="line">        NSString *name = [NSString stringWithCString:cName encoding:NSUTF8StringEncoding];</span><br><span class="line"></span><br><span class="line">        [mArray addObject:name];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> mArray.copy;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@end</span></span><br></pre></td></tr></table></figure>
 <h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt;= [datas count]; i++) &#123;</span><br><span class="line">        //取得所有屬性 ，檢查屬性值使否空</span><br><span class="line">        NSArray *names = [NSArray getProperties:[datas[i] class]];// #import "NSArray+Extension.h" 使用分類(擴充)</span><br><span class="line">        <span class="keyword">for</span> (NSString *name <span class="keyword">in</span> names) &#123;</span><br><span class="line">            // 取得Property的值</span><br><span class="line">            id propertyValue = [datas[i] valueForKey:name];</span><br><span class="line">            NSLog(@<span class="string">"checkJoinMemberAPIPostParameter \npropertyName: %@, propertyValue: %@"</span>, name, propertyValue);</span><br><span class="line">            <span class="keyword">if</span> !(propertyValue) &#123;</span><br><span class="line">                // 如果等於空 表示沒有值</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">//    &#125;</span><br></pre></td></tr></table></figure>
-<p>這種方式可以使用在, 如果你有許多欄位要判斷的時候<br>例如: 加入會員 Class 裡面屬性有 15 個, 每個都要填寫, 都得判斷是否有填寫, 如果一般寫法可能需要 15 個 if 去判斷是否有填寫, 但這樣的寫法只要一個 if</p>
+<blockquote>
+<p>這種方式可以使用在, 如果你有許多欄位要判斷的時候</p>
+<blockquote>
+<p>例如: 加入會員 Class 裡面屬性有 15 個, 每個都要填寫, 都得判斷是否有填寫, 如果一般寫法可能需要 15 個 if 去判斷是否有填寫, 但這樣的寫法只要一個 if</p>
+</blockquote>
+</blockquote>
 <hr>
 
       
@@ -336,7 +341,7 @@
         <p><span>本文標題:</span><a href="/Objective-C.html">Obj-C 動態取得 Class 屬性名稱 and 屬性質值</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Tin</a></p>
         <p><span>發布時間:</span>2017-11-16, 20:22:37</p>
-        <p><span>最後更新:</span>2017-11-16, 20:29:05</p>
+        <p><span>最後更新:</span>2017-11-16, 20:37:36</p>
         <p>
             <span>原始連結:</span><a class="post-url" href="/Objective-C.html" title="Obj-C 動態取得 Class 屬性名稱 and 屬性質值">http://s2339956.github.io/Objective-C.html</a>
             <span class="copy-path" data-clipboard-text="原文: http://s2339956.github.io/Objective-C.html　　作者: Tin" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
