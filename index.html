@@ -310,39 +310,8 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <h2 id="中斷點"><a href="#中斷點" class="headerlink" title="中斷點"></a>中斷點</h2><h4 id="中斷點（breakpoint）除了普通的中斷外，還有五種特殊的形式："><a href="#中斷點（breakpoint）除了普通的中斷外，還有五種特殊的形式：" class="headerlink" title="中斷點（breakpoint）除了普通的中斷外，還有五種特殊的形式："></a>中斷點（breakpoint）除了普通的中斷外，還有五種特殊的形式：</h4><ol>
-<li>Exception Breakpoint：程式碼出現問題，拋出異常時觸發。</li>
-<li>Symbolic Breakpoint：當執行某個符號時觸發。</li>
-<li>OpenGL ES Error Breakpoint：在 OpenGL ES 錯誤發生時觸發。</li>
-<li>Test Failure Breakpoint：測試斷言失敗的時候觸發。</li>
-<li>Swift Error Breakpoint：在 Swift 錯誤發生時觸發。</li>
-</ol>
-<h4 id="普通中斷點："><a href="#普通中斷點：" class="headerlink" title="普通中斷點："></a>普通中斷點：</h4><p>Condition：返回一個布林值，只有在布林值為 true 時才會觸發<br>Ignore：忽略前 n 次斷點，直到第 n+1 次遇到斷點才觸發。<br>Action：斷點觸發時，Xcode 執行的操作，如腳本等。</p>
-<ul>
-<li>AppleScript：用於執行腳本，如 display dialog “SwiftGO” 彈出對話框。</li>
-<li>Capture GPU Frame：攔截在斷點處 GPU 當前繪製的幀圖，用於 OpenGL ES 應用的調適。</li>
-<li>Debugger Command：相當於在控制台中輸入的 lldb 調適指令。</li>
-<li>Log Message：將自定義格式、内容的信息輸出到控制台，常用的占位符有：<br>  %H(斷點第幾次觸發)，%B(斷點所在的方法的名字) 和 @expr@(輸出expr的值)。</li>
-<li>Shell Command：接收命令文件以及相應的參數列表。Xcode 會異步執行 ShellCommand。<br>  勾選 “Waituntildone” 表示等待 Shell 命令執行结束後再執行調適工作。</li>
-<li>Sound：觸發斷點的同時播放聲音。</li>
-<li>Automatically continue after evaluating actions：勾選這個選項後，斷點不會中斷程式運行。</li>
-</ul>
-<h4 id="Swift-Error-Breakpoint："><a href="#Swift-Error-Breakpoint：" class="headerlink" title="Swift Error Breakpoint："></a>Swift Error Breakpoint：</h4><p>拋出一個繼承自 ErrorType 類型的錯誤時會觸發這個中斷點。<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">enum ThisPersonError: ErrorType &#123;</span><br><span class="line">    case IsDead</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func findSomeone(name: String) throws &#123;</span><br><span class="line">    if name == &quot;xx&quot; &#123;</span><br><span class="line">        throw ThisPersonError.IsDead    // 這裡將觸發中斷點</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">do &#123;</span><br><span class="line">    try findSomeone(&quot;xx&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>通過編輯 Swift Error Breakpoint，可以指定響應什麼類型的異常。</p>
-<h4 id="Exception-Breakpoint："><a href="#Exception-Breakpoint：" class="headerlink" title="Exception Breakpoint："></a>Exception Breakpoint：</h4><p>只在 Objective-C 或 C++ 中有用。比如下面這段程式碼：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">int main(int argc, const char * argv[]) &#123;</span><br><span class="line">    @autoreleasepool &#123;</span><br><span class="line">        @try &#123;</span><br><span class="line">            // 打斷點後，程式在下一行程式碼中斷</span><br><span class="line">            @throw [NSException exceptionWithName:@&quot;名字&quot; reason:@&quot;原因&quot; userInfo:nil];</span><br><span class="line">        &#125;</span><br><span class="line">        @catch (NSException *exception) &#123;</span><br><span class="line">            NSLog(@&quot;catch斷點&quot;);</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    return 0;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如果不添加 Exception Breakpoint，會執行到 @catch程式碼區域。這種斷點的編輯界面和以前不太一樣：</p>
-<ul>
-<li>Exception： 表示響應哪種語言的異常，可以是 Objective-C 或 C++</li>
-<li>Break：是在 throw 還是在 catch 中觸發這個異常</li>
-</ul>
-<h4 id="Symbolic-Breakpoint："><a href="#Symbolic-Breakpoint：" class="headerlink" title="Symbolic Breakpoint："></a>Symbolic Breakpoint：</h4><p>符號斷點會在某個方法被調用時觸發:<br>如定義這樣的兩個函數：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">func burnAllCouples() &#123;</span><br><span class="line">    print(&quot;FFF Couples&quot;)</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">func burnAllSingleDogs() &#123;</span><br><span class="line">    print(&quot;FFF Single Dogs&quot;)</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>然後把 Symbol 設置成某個函數的名字：burnAllSingleDogs，這樣每次調用 burnAllSingleDogs 函數都會觸發這個中斷點<br>目前 Swift 中，Symbolic Breakpoint 一個比較大的問題是它不支持帶參數的方法名。</p>
-<h4 id="Test-Failure-Breakpoint"><a href="#Test-Failure-Breakpoint" class="headerlink" title="Test Failure Breakpoint"></a>Test Failure Breakpoint</h4><p>這在測試的斷言失敗時觸發：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">func testExample() &#123;</span><br><span class="line">    XCTAssert(1 == 0)</span><br><span class="line">    // This is an example of a functional test case.</span><br><span class="line">    // Use XCTAssert and related functions to verify your tests produce the correct results.</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>如這個測試斷言必定失敗，添加 Test Failure Breakpoint 後，程式將在 XCTAssert(1 == 0) 處中斷。</p>
-<ul>
-<li>To be added</li>
-</ul>
-
+              <p>Xcode 中斷點 一些簡單的介紹<br>
+          
       
     </div>
     
@@ -355,6 +324,10 @@
         <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
     </div>
 
+      
+        <p class="article-more-link">
+          <a href="/2017/11/16/xcode/#more">more >></a>
+        </p>
       
       <div class="clearfix"></div>
     </div>
