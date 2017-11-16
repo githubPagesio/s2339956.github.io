@@ -35,9 +35,7 @@
 <p>然後把 Symbol 設置成某個函數的名字：burnAllSingleDogs，這樣每次調用 burnAllSingleDogs 函數都會觸發這個中斷點<br>目前 Swift 中，Symbolic Breakpoint 一個比較大的問題是它不支持帶參數的方法名。</p>
 <h3 id="Test-Failure-Breakpoint"><a href="#Test-Failure-Breakpoint" class="headerlink" title="Test Failure Breakpoint"></a>Test Failure Breakpoint</h3><p>這在測試的斷言失敗時觸發：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">func testExample() &#123;</span><br><span class="line">    XCTAssert(1 == 0)</span><br><span class="line">    // This is an example of a functional test case.</span><br><span class="line">    // Use XCTAssert and related functions to verify your tests produce the correct results.</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <p>如這個測試斷言必定失敗，添加 Test Failure Breakpoint 後，程式將在 XCTAssert(1 == 0) 處中斷。</p>
-<ul>
-<li>To be added</li>
-</ul>
+<hr>
 ]]></content>
       
         
