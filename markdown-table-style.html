@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="Objective-C 擴充 NSArray 實現動態取得類別屬性, 縮減程式碼使用">
-<meta name="keywords" content="Objective-C">
+<meta name="description" content="Markdown 寫的表格最終會被解析成 HTML 格式，如果使用的編輯器支持自定義 CSS，就能方便的調整樣式。如果可以引入 JavaScript，樣式自適應也能較好地實現。">
+<meta name="keywords" content="Markdown,Table,CSS,JavaScript">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Obj-C 動態取得 Class 屬性名稱 and 屬性質值">
-<meta property="og:url" content="http://s2339956.github.io/2017/11/16/Objective-C/index.html">
+<meta property="og:title" content="Markdown 表格樣式調整與自適應優化">
+<meta property="og:url" content="http://s2339956.github.io/markdown-table-style.html">
 <meta property="og:site_name" content="Tin Blog">
-<meta property="og:description" content="Objective-C 擴充 NSArray 實現動態取得類別屬性, 縮減程式碼使用">
+<meta property="og:description" content="Markdown 寫的表格最終會被解析成 HTML 格式，如果使用的編輯器支持自定義 CSS，就能方便的調整樣式。如果可以引入 JavaScript，樣式自適應也能較好地實現。">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-11-16T12:23:11.314Z">
+<meta property="og:updated_time" content="2017-11-15T10:09:40.055Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Obj-C 動態取得 Class 屬性名稱 and 屬性質值">
-<meta name="twitter:description" content="Objective-C 擴充 NSArray 實現動態取得類別屬性, 縮減程式碼使用">
+<meta name="twitter:title" content="Markdown 表格樣式調整與自適應優化">
+<meta name="twitter:description" content="Markdown 寫的表格最終會被解析成 HTML 格式，如果使用的編輯器支持自定義 CSS，就能方便的調整樣式。如果可以引入 JavaScript，樣式自適應也能較好地實現。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Obj-C 動態取得 Class 屬性名稱 and 屬性質值 | Tin Blog</title>
+<title>Markdown 表格樣式調整與自適應優化 | Tin Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -279,11 +279,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情連結" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Objective-C" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-markdown-table-style" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2017/11/16/Objective-C/" class="article-date">
-      <time datetime="2017-11-16T12:22:37.000Z" itemprop="datePublished">2017-11-16</time>
+      <a href="/markdown-table-style.html" class="article-date">
+      <time datetime="2017-11-15T12:39:17.000Z" itemprop="datePublished">2017-11-15</time>
 </a>
 
 
@@ -298,7 +298,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Obj-C 動態取得 Class 屬性名稱 and 屬性質值
+      Markdown 表格樣式調整與自適應優化
     </h1>
   
 
@@ -309,7 +309,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Objective-C/">Objective-C</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/CSS/">CSS</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/JavaScript/">JavaScript</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Table/">Table</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -319,12 +319,51 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p>　　Objective-C 擴充 NSArray 實現動態取得類別屬性, 縮減程式碼使用</p>
+        <p>　　Markdown 寫的表格最終會被解析成 HTML 格式，如果使用的編輯器支持自定義 CSS，就能方便的調整樣式。如果可以引入 JavaScript，樣式自適應也能較好地實現。</p>
 <a id="more"></a>
-<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#import "NSArray+Extension.h"</span></span><br><span class="line"><span class="comment">#import &lt;objc/runtime.h&gt; // 導入運行時文件</span></span><br><span class="line"><span class="meta">@implementation NSArray (Extension)</span></span><br><span class="line"></span><br><span class="line">// 返回當前類別所有屬性</span><br><span class="line">+ (instancetype)getProperties:(Class)cls&#123;</span><br><span class="line"></span><br><span class="line">    // 取得當前類別所以屬性</span><br><span class="line">    unsigned int count; // 記錄屬性個數</span><br><span class="line">    objc_property_t *properties = class_copyPropertyList(cls, &amp;count);</span><br><span class="line">    //</span><br><span class="line">    NSMutableArray *mArray = [NSMutableArray array];</span><br><span class="line">    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line"></span><br><span class="line">        // An opaque type that represents an Objective-C declared property.</span><br><span class="line">        // objc_property_t 屬性類型</span><br><span class="line">        objc_property_t property = properties[i];</span><br><span class="line">        // 獲取屬性的名稱 C語言 字串</span><br><span class="line">        const char *cName = property_getName(property);</span><br><span class="line">        // 轉換為 Objective C 字串</span><br><span class="line">        NSString *name = [NSString stringWithCString:cName encoding:NSUTF8StringEncoding];</span><br><span class="line"></span><br><span class="line">        [mArray addObject:name];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> mArray.copy;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@end</span></span><br></pre></td></tr></table></figure>
-<h1 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h1><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line">    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt;= [datas count]; i++) &#123;</span><br><span class="line">        //取得所有屬性 ，檢查屬性值使否空</span><br><span class="line">        NSArray *names = [NSArray getProperties:[datas[i] class]];// #import "NSArray+Extension.h" 使用分類(擴充)</span><br><span class="line">        <span class="keyword">for</span> (NSString *name <span class="keyword">in</span> names) &#123;</span><br><span class="line">            // 取得Property的值</span><br><span class="line">            id propertyValue = [datas[i] valueForKey:name];</span><br><span class="line">            NSLog(@<span class="string">"checkJoinMemberAPIPostParameter \npropertyName: %@, propertyValue: %@"</span>, name, propertyValue);</span><br><span class="line">            <span class="keyword">if</span> !(propertyValue) &#123;</span><br><span class="line">                // 如果等於空 表示沒有值</span><br><span class="line">            &#125;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">//    &#125;</span><br></pre></td></tr></table></figure>
-<p>這種方式可以使用在, 如果你有許多欄位要判斷的時候<br>例如: 加入會員 Class 裡面屬性有 15 個, 每個都要填寫, 都得判斷是否有填寫, 如果一般寫法可能需要 15 個 if 去判斷是否有填寫, 但這樣的寫法只要一個 if</p>
-<hr>
+<p></p><p data-height="300" data-theme-id="0" data-slug-hash="ONyKqb" data-default-tab="css" data-user="MOxFIVE" class="codepen">See the Pen <a href="http://codepen.io/MOxFIVE/pen/ONyKqb/" target="_blank" rel="external">Table style</a> by MOxFIVE (<a href="http://codepen.io/MOxFIVE" target="_blank" rel="external">@MOxFIVE</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
+<script async src="//assets.codepen.io/assets/embed/ei.js"></script>
+
+<h2 id="樣式調整"><a href="#樣式調整" class="headerlink" title="樣式調整"></a>樣式調整</h2><h3 id="基礎概念"><a href="#基礎概念" class="headerlink" title="基礎概念"></a>基礎概念</h3><pre><code>&lt;table&gt;: 表格
+&lt;thead&gt;: table header 表頭區
+&lt;th&gt;: table headings 表頭單元格内容
+&lt;tbody&gt;: table body 表格内容區
+&lt;tr&gt;: table row 表行
+&lt;td&gt;: table data 單元格内容
+</code></pre><h3 id="基本樣式"><a href="#基本樣式" class="headerlink" title="基本樣式"></a>基本樣式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> &#123;</span><br><span class="line">    <span class="attribute">width</span>: <span class="number">100%</span>; <span class="comment">/*表格寬度*/</span></span><br><span class="line">    <span class="attribute">max-width</span>: <span class="number">65em</span>; <span class="comment">/*表格最大寬度，避免表格過寬*/</span></span><br><span class="line">    <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#dedede</span>; <span class="comment">/*表格外邊框設置*/</span></span><br><span class="line">    <span class="attribute">margin</span>: <span class="number">15px</span> auto; <span class="comment">/*外邊距*/</span></span><br><span class="line">    <span class="attribute">border-collapse</span>: collapse; <span class="comment">/*使用單一線條的邊框*/</span></span><br><span class="line">    <span class="attribute">empty-cells</span>: show; <span class="comment">/*單元格無内容依舊繪製邊框*/</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">th</span>,</span><br><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">td</span> &#123;</span><br><span class="line">  <span class="attribute">height</span>: <span class="number">35px</span>; <span class="comment">/*統一每一行的默認高度*/</span></span><br><span class="line">  <span class="attribute">border</span>: <span class="number">1px</span> solid <span class="number">#dedede</span>; <span class="comment">/*内部邊框樣式*/</span></span><br><span class="line">  <span class="attribute">padding</span>: <span class="number">0</span> <span class="number">10px</span>; <span class="comment">/*内邊距*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="表頭樣式"><a href="#表頭樣式" class="headerlink" title="表頭樣式"></a>表頭樣式</h3><figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">th</span> &#123;</span><br><span class="line">    <span class="attribute">font-weight</span>: bold; <span class="comment">/*加粗*/</span></span><br><span class="line">    <span class="attribute">text-align</span>: center <span class="meta">!important</span>; <span class="comment">/*内容居中，加上 !important 避免被 Markdown 樣式覆蓋*/</span></span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(158,188,226,0.2); <span class="comment">/*背景色*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="隔行變色"><a href="#隔行變色" class="headerlink" title="隔行變色"></a>隔行變色</h3><ul>
+<li>使用選擇器選取復數行設置背景色。一般 Markdown 表格編譯後都有 <code>&lt;tbody&gt;</code> 包裹内容，那下面就相當於從表格第二行開始技術</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tbody</span> <span class="selector-tag">tr</span><span class="selector-pseudo">:nth-child(2n)</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="built_in">rgba</span>(158,188,226,0.12);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="懸浮變色"><a href="#懸浮變色" class="headerlink" title="懸浮變色"></a>懸浮變色</h3><ul>
+<li>滑鼠懸浮時該行改變背景色</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">tr</span><span class="selector-pseudo">:hover</span> &#123;</span><br><span class="line">    <span class="attribute">background</span>: <span class="number">#efefef</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="自適應優化"><a href="#自適應優化" class="headerlink" title="自適應優化"></a>自適應優化</h2><p>表格用 Markdown 書寫，編輯器解析，因而只能在已經生成好的程式碼上進行自適應優化。</p>
+<h3 id="表頭不換行"><a href="#表頭不換行" class="headerlink" title="表頭不換行"></a>表頭不換行</h3><ul>
+<li>設置表頭單元格内容不換行，這樣可以通過表頭控制該列的最小寬度，避免瀏覽器視窗缩小時内容被壓縮得太緊</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">th</span> &#123;</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap; <span class="comment">/*表頭内容強制在一行顯示*/</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="首列不換行"><a href="#首列不換行" class="headerlink" title="首列不換行"></a>首列不換行</h3><ul>
+<li>表格第一列單元格内容不換行，多數情况下表格首列不應該被壓縮換行</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-tag">table</span> <span class="selector-tag">td</span><span class="selector-pseudo">:nth-child(1)</span> &#123;</span><br><span class="line">    <span class="attribute">white-space</span>: nowrap;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h3 id="表格滾動條"><a href="#表格滾動條" class="headerlink" title="表格滾動條"></a>表格滾動條</h3><ul>
+<li>添加 JavaScript 代碼，用一個 <code>&lt;div&gt;</code> 把表格包裹起来，父元素寬度不足時顯示横向滾動條，避免表格撑破布局</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">[].slice.call(<span class="built_in">document</span>.querySelectorAll(<span class="string">'table'</span>)).forEach(<span class="function"><span class="keyword">function</span>(<span class="params">el</span>)</span>&#123;</span><br><span class="line">    <span class="keyword">var</span> wrapper = <span class="built_in">document</span>.createElement(<span class="string">'div'</span>);</span><br><span class="line">    wrapper.className = <span class="string">'table-area'</span>;</span><br><span class="line">    el.parentNode.insertBefore(wrapper, el);</span><br><span class="line">    el.parentNode.removeChild(el);</span><br><span class="line">    wrapper.appendChild(el);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure>
+<ul>
+<li>jQuery</li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">"table"</span>).wrap(<span class="string">"&lt;div class='table-area'&gt;&lt;/div&gt;"</span>);</span><br></pre></td></tr></table></figure>
+<ul>
+<li>同时添加如下 CSS</li>
+</ul>
+<figure class="highlight css"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="selector-class">.table-area</span> &#123;</span><br><span class="line">    <span class="attribute">overflow</span>: auto;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<ul>
+<li>To be added</li>
+</ul>
 
       
     </div>
@@ -333,13 +372,13 @@
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/2017/11/16/Objective-C/">Obj-C 動態取得 Class 屬性名稱 and 屬性質值</a></p>
+        <p><span>本文標題:</span><a href="/markdown-table-style.html">Markdown 表格樣式調整與自適應優化</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Tin</a></p>
-        <p><span>發布時間:</span>2017-11-16, 20:22:37</p>
-        <p><span>最後更新:</span>2017-11-16, 20:23:11</p>
+        <p><span>發布時間:</span>2017-11-15, 20:39:17</p>
+        <p><span>最後更新:</span>2017-11-15, 18:09:40</p>
         <p>
-            <span>原始連結:</span><a class="post-url" href="/2017/11/16/Objective-C/" title="Obj-C 動態取得 Class 屬性名稱 and 屬性質值">http://s2339956.github.io/2017/11/16/Objective-C/</a>
-            <span class="copy-path" data-clipboard-text="原文: http://s2339956.github.io/2017/11/16/Objective-C/　　作者: Tin" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
+            <span>原始連結:</span><a class="post-url" href="/markdown-table-style.html" title="Markdown 表格樣式調整與自適應優化">http://s2339956.github.io/markdown-table-style.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://s2339956.github.io/markdown-table-style.html　　作者: Tin" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -351,10 +390,16 @@
 
     <nav id="article-nav">
         
+            <div id="article-nav-newer" class="article-nav-title">
+                <a href="/xcode.html">
+                    Xcode 中斷點 簡介
+                </a>
+            </div>
+        
         
             <div id="article-nav-older" class="article-nav-title">
-                <a href="/2017/11/16/xcode/">
-                    Xcode 中斷點 簡介
+                <a href="/常用-Hexo-指令.html">
+                    常用 Hexo 指令
                 </a>
             </div>
         
@@ -366,7 +411,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用方法"><span class="toc-number">1.</span> <span class="toc-text">使用方法</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#樣式調整"><span class="toc-number">1.</span> <span class="toc-text">樣式調整</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#基礎概念"><span class="toc-number">1.1.</span> <span class="toc-text">基礎概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#基本樣式"><span class="toc-number">1.2.</span> <span class="toc-text">基本樣式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表頭樣式"><span class="toc-number">1.3.</span> <span class="toc-text">表頭樣式</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#隔行變色"><span class="toc-number">1.4.</span> <span class="toc-text">隔行變色</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#懸浮變色"><span class="toc-number">1.5.</span> <span class="toc-text">懸浮變色</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#自適應優化"><span class="toc-number">2.</span> <span class="toc-text">自適應優化</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#表頭不換行"><span class="toc-number">2.1.</span> <span class="toc-text">表頭不換行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#首列不換行"><span class="toc-number">2.2.</span> <span class="toc-text">首列不換行</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#表格滾動條"><span class="toc-number">2.3.</span> <span class="toc-text">表格滾動條</span></a></li></ol></li></ol>
         
     </div>
     <style>
@@ -402,7 +447,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Obj-C 動態取得 Class 屬性名稱 and 屬性質值　| Tin Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Markdown 表格樣式調整與自適應優化　| Tin Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -421,8 +466,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://s2339956.github.io/2017/11/16/Objective-C/';
-            this.page.identifier = '2017/11/16/Objective-C/';
+            this.page.url = 'http://s2339956.github.io/markdown-table-style.html';
+            this.page.identifier = 'markdown-table-style.html';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -462,8 +507,8 @@
 
     // Add comment count
     <script id="dsq-count-scr" src="//s2339956.disqus.com/count.js" async></script>
-    <span class="disqus-comment-count" data-disqus-identifier="2017/11/16/Objective-C/"></span>
-    <span class="disqus-comment-count" data-disqus-url="http://s2339956.github.io/2017/11/16/Objective-C/"></span>
+    <span class="disqus-comment-count" data-disqus-identifier="markdown-table-style.html"></span>
+    <span class="disqus-comment-count" data-disqus-url="http://s2339956.github.io/markdown-table-style.html"></span>
     <script>
         $(".disqus-comment-count").hide();
         var $disqusCount = $(".disqus-comment-count");
@@ -482,19 +527,21 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
+            <a href="/xcode.html" title="上一篇: Xcode 中斷點 簡介">
+                <i class="fa fa-angle-left"></i>
+            </a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/2017/11/16/xcode/" title="下一篇: Xcode 中斷點 簡介">
+            <a href="/常用-Hexo-指令.html" title="下一篇: 常用 Hexo 指令">
                 <i class="fa fa-angle-right"></i>
             </a>
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/Objective-C/">Obj-C 動態取得 Class 屬性名稱 and 屬性質值</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/xcode/">Xcode 中斷點 簡介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/markdown-table-style/">Markdown 表格樣式調整與自適應優化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/常用-Hexo-指令/">常用 Hexo 指令</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/Objective-C.html">Obj-C 動態取得 Class 屬性名稱 and 屬性質值</a></li><li class="post-list-item"><a class="post-list-link" href="/xcode.html">Xcode 中斷點 簡介</a></li><li class="post-list-item"><a class="post-list-link" href="/markdown-table-style.html">Markdown 表格樣式調整與自適應優化</a></li><li class="post-list-item"><a class="post-list-link" href="/常用-Hexo-指令.html">常用 Hexo 指令</a></li></ul>
 
 
 
