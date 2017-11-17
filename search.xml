@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[Obj-C 動態取得 Class 屬性名稱 and 屬性質值]]></title>
-      <url>/Objective-C.html</url>
+      <url>/2017/11/16/Objective-C/</url>
       <content type="html"><![CDATA[<p>　　Objective-C 擴充 NSArray 實現動態取得類別屬性, 縮減程式碼使用</p>
 <a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#import "NSArray+Extension.h"</span></span><br><span class="line"><span class="comment">#import &lt;objc/runtime.h&gt; // 導入運行時文件</span></span><br><span class="line"><span class="meta">@implementation NSArray (Extension)</span></span><br><span class="line"></span><br><span class="line">// 返回當前類別所有屬性</span><br><span class="line">+ (instancetype)getProperties:(Class)cls&#123;</span><br><span class="line"></span><br><span class="line">    // 取得當前類別所以屬性</span><br><span class="line">    unsigned int count; // 記錄屬性個數</span><br><span class="line">    objc_property_t *properties = class_copyPropertyList(cls, &amp;count);</span><br><span class="line">    //</span><br><span class="line">    NSMutableArray *mArray = [NSMutableArray array];</span><br><span class="line">    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line"></span><br><span class="line">        // An opaque type that represents an Objective-C declared property.</span><br><span class="line">        // objc_property_t 屬性類型</span><br><span class="line">        objc_property_t property = properties[i];</span><br><span class="line">        // 獲取屬性的名稱 C語言 字串</span><br><span class="line">        const char *cName = property_getName(property);</span><br><span class="line">        // 轉換為 Objective C 字串</span><br><span class="line">        NSString *name = [NSString stringWithCString:cName encoding:NSUTF8StringEncoding];</span><br><span class="line"></span><br><span class="line">        [mArray addObject:name];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> mArray.copy;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@end</span></span><br></pre></td></tr></table></figure>
@@ -29,7 +29,7 @@
     
     <entry>
       <title><![CDATA[Xcode 中斷點 簡介]]></title>
-      <url>/xcode.html</url>
+      <url>/2017/11/16/xcode/</url>
       <content type="html"><![CDATA[<p>Xcode 中斷點 一些簡單的介紹<br><a id="more"></a></p>
 <h2 id="中斷點"><a href="#中斷點" class="headerlink" title="中斷點"></a>中斷點</h2><h3 id="中斷點（breakpoint）除了普通的中斷外，還有五種特殊的形式："><a href="#中斷點（breakpoint）除了普通的中斷外，還有五種特殊的形式：" class="headerlink" title="中斷點（breakpoint）除了普通的中斷外，還有五種特殊的形式："></a>中斷點（breakpoint）除了普通的中斷外，還有五種特殊的形式：</h3><ol>
 <li>Exception Breakpoint：程式碼出現問題，拋出異常時觸發。</li>
@@ -74,7 +74,7 @@
     
     <entry>
       <title><![CDATA[Markdown 表格樣式調整與自適應優化]]></title>
-      <url>/markdown-table-style.html</url>
+      <url>/2017/11/15/markdown-table-style/</url>
       <content type="html"><![CDATA[<p>　　Markdown 寫的表格最終會被解析成 HTML 格式，如果使用的編輯器支持自定義 CSS，就能方便的調整樣式。如果可以引入 JavaScript，樣式自適應也能較好地實現。</p>
 <a id="more"></a>
 <p></p><p data-height="300" data-theme-id="0" data-slug-hash="ONyKqb" data-default-tab="css" data-user="MOxFIVE" class="codepen">See the Pen <a href="http://codepen.io/MOxFIVE/pen/ONyKqb/" target="_blank" rel="external">Table style</a> by MOxFIVE (<a href="http://codepen.io/MOxFIVE" target="_blank" rel="external">@MOxFIVE</a>) on <a href="http://codepen.io" target="_blank" rel="external">CodePen</a>.</p><p></p>
@@ -139,7 +139,7 @@
     
     <entry>
       <title><![CDATA[常用 Hexo 指令]]></title>
-      <url>/%E5%B8%B8%E7%94%A8-Hexo-%E6%8C%87%E4%BB%A4.html</url>
+      <url>/2017/11/15/%E5%B8%B8%E7%94%A8-Hexo-%E6%8C%87%E4%BB%A4/</url>
       <content type="html"><![CDATA[<p><excerpt in="" index="" |="" 首页摘要=""><br>一些經常使用的 Hexo 指令.<a id="more"></a></excerpt></p>
 <the rest="" of="" contents="" |="" 余下全文="">
 
