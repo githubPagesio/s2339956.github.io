@@ -4,13 +4,15 @@
 
     
   <url>
-    <loc>http://www.s2339956.github.io.com/2017/11/19/2017-11-19-21-37/</loc>
-    <lastmod>2017-11-19T13:39:49.520Z</lastmod>
+    <loc>http://www.s2339956.github.io.com/2017/11/21/Xcode/</loc>
+    <lastmod>2017-11-21T10:43:45.288Z</lastmod>
     <data>
         <display>
-        <title>2017-11-19-21:37</title>
-        <pubTime>2017-11-19T13:38:00.000Z</pubTime>
+        <title>Xcode lldb 小技能</title>
+        <pubTime>2017-11-21T10:43:06.000Z</pubTime>
         
+        <tag>Xcode</tag>
+         
          
            
         </display>
@@ -20,7 +22,7 @@
     
   <url>
     <loc>http://www.s2339956.github.io.com/2017/11/19/Python/</loc>
-    <lastmod>2017-11-19T11:32:10.890Z</lastmod>
+    <lastmod>2017-11-21T10:01:16.824Z</lastmod>
     <data>
         <display>
         <title>Python join 語法使用</title>
@@ -28,6 +30,21 @@
         
         <tag>Python</tag>
          
+         
+           
+        </display>
+    </data>
+    </url>
+
+    
+  <url>
+    <loc>http://www.s2339956.github.io.com/2017/11/19/2017-11-19-21-37/</loc>
+    <lastmod>2017-11-19T13:39:49.520Z</lastmod>
+    <data>
+        <display>
+        <title>2017-11-19-21:37</title>
+        <pubTime>2017-11-19T13:38:00.000Z</pubTime>
+        
          
            
         </display>

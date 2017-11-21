@@ -23,7 +23,7 @@
 <meta property="og:site_name" content="Tin Blog">
 <meta property="og:description" content="Python 神奇的 Join 使用">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-11-19T11:32:10.890Z">
+<meta property="og:updated_time" content="2017-11-21T10:01:16.824Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Python join 語法使用">
 <meta name="twitter:description" content="Python 神奇的 Join 使用">
@@ -323,7 +323,7 @@
 <a id="more"></a>
 <p>最近開始嘗試寫 blog, 記錄一些過程<br>但每次都必須要輸入一些指令 生成 部署<br>實在讓我有點煩, 懶惰癌無限擴張<br>自己寫了一個 python 的小軟件<br>讓我只要確認路徑正確, 按下確定, 就能讓它自己完成這些小事情<br>就剛好使用了, 這個方法來打印出相關資訊</p>
 <h3 id="展示一下用法"><a href="#展示一下用法" class="headerlink" title="展示一下用法"></a>展示一下用法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 為自己 Hexo 的安装路徑</span></span><br><span class="line">hexo_install_folder = self.userinput</span><br><span class="line">target_folder_path = str(hexo_install_folder + <span class="string">'/source/_posts/'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 當前目錄下所有 檔案名稱 是個陣列 Array</span></span><br><span class="line">cur_filename_list = os.listdir(cur_folder_path)</span><br><span class="line">print(cur_filename_list) <span class="comment"># 直接打印 是沒問題的</span></span><br><span class="line"><span class="comment"># label 顯示相關訊息</span></span><br><span class="line">self.displayText[<span class="string">"text"</span>] = <span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> cur_filename_list)</span><br></pre></td></tr></table></figure>
-<h3 id="解釋"><a href="#解釋" class="headerlink" title="解釋"></a>解釋</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 這邊結果會是 例如: 一個空格 加上 名稱</span></span><br><span class="line"><span class="comment">## 具體運作是, 取得 cur_filename_list 每一個內容 轉 String, 然後在前面加上 "空格"</span></span><br><span class="line"><span class="comment">## 再把他們都串起來, 變成一個字串</span></span><br><span class="line"><span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> cur_filename_list)</span><br></pre></td></tr></table></figure>
+<h3 id="解釋"><a href="#解釋" class="headerlink" title="解釋"></a>解釋</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 這邊結果會是 例如: 一個空格 加上 名稱</span></span><br><span class="line"><span class="comment">## 具體運作是, 取得 cur_filename_list 每一個內容 轉 String, 然後在前面加上 "空格"</span></span><br><span class="line"><span class="comment">## 再把他們都串起來, 變成一個字串</span></span><br><span class="line"><span class="comment">## 簡單來說 就是</span></span><br><span class="line"><span class="comment">## 返回值</span></span><br><span class="line"><span class="comment">## 回傳通過指定的字串連接陣列中元素後生成的新字串</span></span><br><span class="line"><span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> cur_filename_list)</span><br></pre></td></tr></table></figure>
 <hr>
 
       
@@ -336,7 +336,7 @@
         <p><span>本文標題:</span><a href="/2017/11/19/Python/">Python join 語法使用</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Tin</a></p>
         <p><span>發布時間:</span>2017-11-19, 19:13:30</p>
-        <p><span>最後更新:</span>2017-11-19, 19:32:10</p>
+        <p><span>最後更新:</span>2017-11-21, 18:01:16</p>
         <p>
             <span>原始連結:</span><a class="post-url" href="/2017/11/19/Python/" title="Python join 語法使用">http://www.s2339956.github.io.com/2017/11/19/Python/</a>
             <span class="copy-path" data-clipboard-text="原文: http://www.s2339956.github.io.com/2017/11/19/Python/　　作者: Tin" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
@@ -502,7 +502,7 @@
         
     </div>
 
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/19/2017-11-19-21-37/">2017-11-19-21:37</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/19/Python/">Python join 語法使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/Objective-C/">Obj-C 動態取得 Class 屬性名稱 and 屬性質值</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/xcode/">Xcode 中斷點 簡介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/markdown-table-style/">Markdown 表格樣式調整與自適應優化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/常用-Hexo-指令/">常用 Hexo 指令</a></li></ul>
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2017/11/21/Xcode/">Xcode lldb 小技能</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/19/2017-11-19-21-37/">2017-11-19-21:37</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/19/Python/">Python join 語法使用</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/Objective-C/">Obj-C 動態取得 Class 屬性名稱 and 屬性質值</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/16/xcode/">Xcode 中斷點 簡介</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/markdown-table-style/">Markdown 表格樣式調整與自適應優化</a></li><li class="post-list-item"><a class="post-list-link" href="/2017/11/15/常用-Hexo-指令/">常用 Hexo 指令</a></li></ul>
 
 
 
