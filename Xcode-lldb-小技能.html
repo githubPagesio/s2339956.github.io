@@ -15,18 +15,18 @@
 
 
 
-<meta name="description" content="一些經常使用的 Hexo 指令.">
-<meta name="keywords" content="Hexo">
+<meta name="description" content="Xcode lldb 我經常使用的小伎倆">
+<meta name="keywords" content="Xcode,lldb,調適">
 <meta property="og:type" content="article">
-<meta property="og:title" content="常用 Hexo 指令">
-<meta property="og:url" content="http://s2339956.github.io/常用-Hexo-指令.html">
+<meta property="og:title" content="Xcode lldb 小技能">
+<meta property="og:url" content="http://s2339956.github.io/Xcode-lldb-小技能.html">
 <meta property="og:site_name" content="Tin Blog">
-<meta property="og:description" content="一些經常使用的 Hexo 指令.">
+<meta property="og:description" content="Xcode lldb 我經常使用的小伎倆">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-11-15T01:49:38.526Z">
+<meta property="og:updated_time" content="2017-11-22T06:11:39.424Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="常用 Hexo 指令">
-<meta name="twitter:description" content="一些經常使用的 Hexo 指令.">
+<meta name="twitter:title" content="Xcode lldb 小技能">
+<meta name="twitter:description" content="Xcode lldb 我經常使用的小伎倆">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +58,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>常用 Hexo 指令 | Tin Blog</title>
+<title>Xcode lldb 小技能 | Tin Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -281,11 +281,11 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情連結" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-常用-Hexo-指令" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Xcode-lldb-小技能" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/常用-Hexo-指令.html" class="article-date">
-      <time datetime="2017-11-15T01:24:05.000Z" itemprop="datePublished">2017-11-15</time>
+      <a href="/Xcode-lldb-小技能.html" class="article-date">
+      <time datetime="2017-11-21T10:43:06.000Z" itemprop="datePublished">2017-11-21</time>
 </a>
 
 
@@ -300,7 +300,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      常用 Hexo 指令
+      Xcode lldb 小技能
     </h1>
   
 
@@ -311,7 +311,7 @@
 
         
     <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
     </div>
 
         <div class="clearfix"></div>
@@ -321,14 +321,17 @@
     <div class="article-entry" itemprop="articleBody">
       
           
-        <p><excerpt in="" index="" |="" 首页摘要=""><br>一些經常使用的 Hexo 指令.<a id="more"></a></excerpt></p>
-<the rest="" of="" contents="" |="" 余下全文="">
+        <p>　　Xcode lldb 我經常使用的小伎倆</p>
+<a id="more"></a>
+<h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>下中斷點, 即可發現, 右下角出現 lldb 字樣, 就能開始輸入指令使用囉～</p>
 
-<h3 id="基本指令"><a href="#基本指令" class="headerlink" title="基本指令"></a>基本指令</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new &quot;postName&quot; 		# 產生新的文章</span><br><span class="line">$ hexo new page &quot;pageName&quot; 	# 產生新的頁面</span><br><span class="line">$ hexo clean 				# 清除快取檔案 (db.json) 和已產生的靜態檔案 (public)</span><br><span class="line">$ hexo list &lt;type&gt; 			# 列出網站資料</span><br><span class="line">$ hexo version 				# 顯示版本資訊</span><br></pre></td></tr></table></figure>
-<h3 id="指令簡寫"><a href="#指令簡寫" class="headerlink" title="指令簡寫"></a>指令簡寫</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$ hexo n == hexo new   		# 產生新的 post/page/draft</span><br><span class="line">$ hexo g == hexo generate  	# 產生靜態文件</span><br><span class="line">$ hexo s == hexo server		# 啟動本地瀏覽</span><br><span class="line">$ hexo d == hexo deploy		# 部署文件至 Github 上</span><br></pre></td></tr></table></figure>
-<h3 id="指令組合"><a href="#指令組合" class="headerlink" title="指令組合"></a>指令組合</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ hexo d -g	# 產生靜態文件後，部署 blog</span><br><span class="line">$ hexo s -g	# 產生靜態文件後，預覽 blog</span><br></pre></td></tr></table></figure>
-<p><a href="https://hexo.io/zh-tw/docs/commands.html" target="_blank" rel="external">Hexo 官方網</a></p>
-</the>
+<h1 id="help-指令"><a href="#help-指令" class="headerlink" title="help 指令"></a>help 指令</h1><p>最間單指令是 help，它會列出所有的指令。如果你忘記了一個指令是做什麼的，或者想知道更多的話，你可以聽過 <code>help &lt;command&gt;</code> 來離解更多，例如 <code>help print</code> 或者 <code>help thread</code>。如果你甚至忘記了 help 指令是做什麼的，你可以試試 help help。不過你如果知道怎麼做，那就說明你大概還沒有忘光這個指令。😛</p>
+<h1 id="打印資訊"><a href="#打印資訊" class="headerlink" title="打印資訊"></a>打印資訊</h1><p>打印某些資訊時, 我習慣使用 <code>po</code> (<code>print object</code> 的縮寫), 這樣就不用每次為了得到某些資訊都得下 print or NSLog 然後重新運行</p>
+
+<h1 id="修改數值"><a href="#修改數值" class="headerlink" title="修改數值"></a>修改數值</h1><p><code>expression</code><br>也能簡寫成 <code>e</code><br>可以動態的去修改, 某些值<br>最常使用在, 如果在測試階段時, 想強迫它進某一個判斷使用</p>
+
+
+
       
     </div>
     
@@ -336,13 +339,13 @@
   
     
     <div class="copyright">
-        <p><span>本文標題:</span><a href="/常用-Hexo-指令.html">常用 Hexo 指令</a></p>
+        <p><span>本文標題:</span><a href="/Xcode-lldb-小技能.html">Xcode lldb 小技能</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主頁">Tin</a></p>
-        <p><span>發布時間:</span>2017-11-15, 09:24:05</p>
-        <p><span>最後更新:</span>2017-11-15, 09:49:38</p>
+        <p><span>發布時間:</span>2017-11-21, 18:43:06</p>
+        <p><span>最後更新:</span>2017-11-22, 14:11:39</p>
         <p>
-            <span>原始連結:</span><a class="post-url" href="/常用-Hexo-指令.html" title="常用 Hexo 指令">http://s2339956.github.io/常用-Hexo-指令.html</a>
-            <span class="copy-path" data-clipboard-text="原文: http://s2339956.github.io/常用-Hexo-指令.html　　作者: Tin" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
+            <span>原始連結:</span><a class="post-url" href="/Xcode-lldb-小技能.html" title="Xcode lldb 小技能">http://s2339956.github.io/Xcode-lldb-小技能.html</a>
+            <span class="copy-path" data-clipboard-text="原文: http://s2339956.github.io/Xcode-lldb-小技能.html　　作者: Tin" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
             <script> var clipboard = new Clipboard('.copy-path'); </script>
         </p>
         <p>
@@ -354,12 +357,12 @@
 
     <nav id="article-nav">
         
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/markdown-table-style.html">
-                    Markdown 表格樣式調整與自適應優化
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2017-11-19-21-37.html">
+                    2017-11-19-21:37
                 </a>
             </div>
-        
         
     </nav>
 
@@ -369,7 +372,7 @@
     <div id="toc" class="toc-article">
         <strong class="toc-title">文章目錄</strong>
         
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#基本指令"><span class="toc-number">1.</span> <span class="toc-text">基本指令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指令簡寫"><span class="toc-number">2.</span> <span class="toc-text">指令簡寫</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#指令組合"><span class="toc-number">3.</span> <span class="toc-text">指令組合</span></a></li></ol>
+            <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#使用"><span class="toc-number">1.</span> <span class="toc-text">使用</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#help-指令"><span class="toc-number">2.</span> <span class="toc-text">help 指令</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#打印資訊"><span class="toc-number">3.</span> <span class="toc-text">打印資訊</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#修改數值"><span class="toc-number">4.</span> <span class="toc-text">修改數值</span></a></li></ol>
         
     </div>
     <style>
@@ -405,7 +408,7 @@
         </div>
         <script>
             window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"常用 Hexo 指令　| Tin Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+                "common":{"bdSnsKey":{},"bdText":"Xcode lldb 小技能　| Tin Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
         </script>
     
 
@@ -424,8 +427,8 @@
     <div id="disqus_thread"></div>
     <script>
         var disqus_config = function(){
-            this.page.url = 'http://s2339956.github.io/常用-Hexo-指令.html';
-            this.page.identifier = '常用-Hexo-指令.html';
+            this.page.url = 'http://s2339956.github.io/Xcode-lldb-小技能.html';
+            this.page.identifier = 'Xcode-lldb-小技能.html';
         };
         var loadComment = function(){
             var d = document, s = d.createElement('script');
@@ -465,8 +468,8 @@
 
     // Add comment count
     <script id="dsq-count-scr" src="//s2339956.disqus.com/count.js" async></script>
-    <span class="disqus-comment-count" data-disqus-identifier="常用-Hexo-指令.html"></span>
-    <span class="disqus-comment-count" data-disqus-url="http://s2339956.github.io/常用-Hexo-指令.html"></span>
+    <span class="disqus-comment-count" data-disqus-identifier="Xcode-lldb-小技能.html"></span>
+    <span class="disqus-comment-count" data-disqus-url="http://s2339956.github.io/Xcode-lldb-小技能.html"></span>
     <script>
         $(".disqus-comment-count").hide();
         var $disqusCount = $(".disqus-comment-count");
@@ -485,15 +488,15 @@
 
     <div class="scroll" id="post-nav-button">
         
-            <a href="/markdown-table-style.html" title="上一篇: Markdown 表格樣式調整與自適應優化">
-                <i class="fa fa-angle-left"></i>
-            </a>
+            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
         
 
         <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
 
         
-            <a href="/" title="回到主頁"><i class="fa fa-home"></i></a>
+            <a href="/2017-11-19-21-37.html" title="下一篇: 2017-11-19-21:37">
+                <i class="fa fa-angle-right"></i>
+            </a>
         
     </div>
 
