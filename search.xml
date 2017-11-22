@@ -13,8 +13,8 @@
 <h1 id="打印資訊"><a href="#打印資訊" class="headerlink" title="打印資訊"></a>打印資訊</h1><p>打印某些資訊時, 我習慣使用 <code>po</code> (<code>print object</code> 的縮寫), 這樣就不用每次為了得到某些資訊都得下 print or NSLog 然後重新運行</p>
 <p><img src="https://imgur.com/9mEhr2e" alt="po"></p>
 <h1 id="修改數值"><a href="#修改數值" class="headerlink" title="修改數值"></a>修改數值</h1><p><code>expression</code><br>也能簡寫成 <code>e</code><br>可以動態的去修改, 某些值<br>最常使用在, 如果在測試階段時, 想強迫它進某一個判斷使用</p>
-<p><img src="https://imgur.com/TCQ3VHn" alt="po"></p>
-<p><img src="https://imgur.com/V7qaaDH" alt="po"></p>
+<p><img src="https://imgur.com/TCQ3VHn" alt="expression"></p>
+<p><img src="https://imgur.com/V7qaaDH" alt="expression"></p>
 ]]></content>
       
         
