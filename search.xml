@@ -4,7 +4,7 @@
     
     <entry>
       <title><![CDATA[Xcode lldb 小技能]]></title>
-      <url>/Xcode.html</url>
+      <url>/Xcode-lldb-%E5%B0%8F%E6%8A%80%E8%83%BD.html</url>
       <content type="html"><![CDATA[<p>　　Xcode lldb 我經常使用的小伎倆</p>
 <a id="more"></a>
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>下中斷點, 即可發現, 右下角出現 lldb 字樣, 就能開始輸入指令使用囉～</p>
@@ -57,7 +57,7 @@
     
     <entry>
       <title><![CDATA[Obj-C 動態取得 Class 屬性名稱 and 屬性質值]]></title>
-      <url>/Objective-C.html</url>
+      <url>/Obj-C-%E5%8B%95%E6%85%8B%E5%8F%96%E5%BE%97-Class-%E5%B1%AC%E6%80%A7%E5%90%8D%E7%A8%B1-and-%E5%B1%AC%E6%80%A7%E8%B3%AA%E5%80%BC.html</url>
       <content type="html"><![CDATA[<p>　　Objective-C 擴充 NSArray 實現動態取得類別屬性, 縮減程式碼使用</p>
 <a id="more"></a>
 <figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#import "NSArray+Extension.h"</span></span><br><span class="line"><span class="comment">#import &lt;objc/runtime.h&gt; // 導入運行時文件</span></span><br><span class="line"><span class="meta">@implementation NSArray (Extension)</span></span><br><span class="line"></span><br><span class="line">// 返回當前類別所有屬性</span><br><span class="line">+ (instancetype)getProperties:(Class)cls&#123;</span><br><span class="line"></span><br><span class="line">    // 取得當前類別所以屬性</span><br><span class="line">    unsigned int count; // 記錄屬性個數</span><br><span class="line">    objc_property_t *properties = class_copyPropertyList(cls, &amp;count);</span><br><span class="line">    //</span><br><span class="line">    NSMutableArray *mArray = [NSMutableArray array];</span><br><span class="line">    <span class="keyword">for</span> (int i = <span class="number">0</span>; i &lt; count; i++) &#123;</span><br><span class="line"></span><br><span class="line">        // An opaque type that represents an Objective-C declared property.</span><br><span class="line">        // objc_property_t 屬性類型</span><br><span class="line">        objc_property_t property = properties[i];</span><br><span class="line">        // 獲取屬性的名稱 C語言 字串</span><br><span class="line">        const char *cName = property_getName(property);</span><br><span class="line">        // 轉換為 Objective C 字串</span><br><span class="line">        NSString *name = [NSString stringWithCString:cName encoding:NSUTF8StringEncoding];</span><br><span class="line"></span><br><span class="line">        [mArray addObject:name];</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> mArray.copy;</span><br><span class="line">&#125;</span><br><span class="line"><span class="meta">@end</span></span><br></pre></td></tr></table></figure>
@@ -65,7 +65,7 @@
 <blockquote>
 <p>這種方式可以使用在, 如果你有許多欄位要判斷的時候</p>
 <blockquote>
-<p>例如: 加入會員 Class 裡面屬性有 15 個, 每個都要填寫, 都得判斷是否有填寫, 如果一般寫法可能需要 15 個 if 去判斷是否有填寫, 但這樣的寫法只要一個 if</p>
+<p>例如: 加入會員 Class 裡面屬性有 15 個, 每個都要填寫, 都得判斷是否有填寫,<br>如果一般寫法可能需要 15 個 if 去判斷是否有填寫, 但這樣的寫法只要一個 if</p>
 </blockquote>
 </blockquote>
 <hr>
