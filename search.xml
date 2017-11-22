@@ -8,12 +8,12 @@
       <content type="html"><![CDATA[<p>　　Xcode lldb 我經常使用的小伎倆</p>
 <a id="more"></a>
 <h1 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h1><p>下中斷點, 即可發現, 右下角出現 lldb 字樣, 就能開始輸入指令使用囉～</p>
-<p><img src="source/images/Xcode-LLDB-Images/螢幕快照 2017-11-21 下午6.08.48.png" alt=""></p>
+<p><img src="/images/Xcode-LLDB-Images/螢幕快照 2017-11-21 下午6.08.48.png" alt=""></p>
 <h1 id="help-指令"><a href="#help-指令" class="headerlink" title="help 指令"></a>help 指令</h1><p>最間單指令是 help，它會列出所有的指令。如果你忘記了一個指令是做什麼的，或者想知道更多的話，你可以聽過 <code>help &lt;command&gt;</code> 來離解更多，例如 <code>help print</code> 或者 <code>help thread</code>。如果你甚至忘記了 help 指令是做什麼的，你可以試試 help help。不過你如果知道怎麼做，那就說明你大概還沒有忘光這個指令。😛</p>
 <h1 id="打印資訊"><a href="#打印資訊" class="headerlink" title="打印資訊"></a>打印資訊</h1><p>打印某些資訊時, 我習慣使用 <code>po</code> (<code>print object</code> 的縮寫), 這樣就不用每次為了得到某些資訊都得下 print or NSLog 然後重新運行</p>
 <p><img src="/source/images/Xcode-LLDB-Images/螢幕快照 2017-11-21 下午6.19.43.png" alt=""></p>
-<h1 id="修改數值"><a href="#修改數值" class="headerlink" title="修改數值"></a>修改數值</h1><p><code>expression</code><br>也能簡寫成 <code>e</code><br>可以動態的去修改, 某些值<br>最常使用在, 如果在測試階段時, 想強迫它進某一個判斷使用<br><img src="source/images/Xcode-LLDB-Images/螢幕快照 2017-11-21 下午6.34.03" alt=""></p>
-<p><img src="source/images/Xcode-LLDB-Images/螢幕快照 2017-11-21 下午6.40.00" alt=""></p>
+<h1 id="修改數值"><a href="#修改數值" class="headerlink" title="修改數值"></a>修改數值</h1><p><code>expression</code><br>也能簡寫成 <code>e</code><br>可以動態的去修改, 某些值<br>最常使用在, 如果在測試階段時, 想強迫它進某一個判斷使用<br><img src="/images/Xcode-LLDB-Images/螢幕快照 2017-11-21 下午6.34.03" alt=""></p>
+<p><img src="/images/Xcode-LLDB-Images/螢幕快照 2017-11-21 下午6.40.00" alt=""></p>
 ]]></content>
       
         
