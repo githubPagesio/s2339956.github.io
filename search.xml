@@ -3,7 +3,7 @@
   
     
     <entry>
-      <title><![CDATA[Reveal14 環境搭建]]></title>
+      <title><![CDATA[Reveal 14版 環境搭建]]></title>
       <url>/Reveal14%20%E4%BD%BF%E7%94%A8.html</url>
       <content type="html"><![CDATA[<p>　　使用 Reveal 14版, 來看 App 裸奔～</p>
 <a id="more"></a>
@@ -11,6 +11,22 @@
 <p><img src="https://upload-images.jianshu.io/upload_images/656644-1307312b296bb34e.png" alt="Reveal 運行"></p>
 <h1 id="搭建準備"><a href="#搭建準備" class="headerlink" title="搭建準備"></a>搭建準備</h1><p>1.安裝好 <a href="https://revealapp.com/" target="_blank" rel="external">Reveal</a><br>2.準備一隻已越獄 iOS10 iPhone (目前工具只支持iOS8~iOS10)<br>3.承接二項, 將設備安裝 <a href="https://github.com/Naville/Reveal2Loader" target="_blank" rel="external">Reveal2Loader</a><br>4.承接二項, 將設備安裝 <a href="https://cydia.saurik.com/package/openssh/" target="_blank" rel="external">OpenSSH</a></p>
 <h1 id="環境搭建"><a href="#環境搭建" class="headerlink" title="環境搭建"></a>環境搭建</h1><p>1.運行 <a href="https://revealapp.com/" target="_blank" rel="external">Reveal</a><br>2.點擊 help -&gt; Show Reveal Library in finder -&gt; iOS Library -&gt; RevealServer.framework, 複製路徑<br>3.複製 RevealServer.framework 至 設備路徑 /Library/Frameworks (ssh 相關使用就不多說了～),<br>scp -r <code>第二點複製的路徑</code> root@<code>192.168.2.X</code>:/Library/Frameworks (高亮的部分需修改)<br>4.到手機設定上, 找到剛安裝的 Reveal2Loader, 選取想讓他裸奔的 App<br>5.就能開始欣賞他裸奔囉 <img src="https://user-gold-cdn.xitu.io/2017/12/14/16052b31b8eb30f4?imageslim" alt="連接運行"></p>
+]]></content>
+      
+        
+    </entry>
+    
+    <entry>
+      <title><![CDATA[跳過iOS網頁視頻廣告，這樣就可以簡單做到]]></title>
+      <url>/%E8%B7%B3%E9%81%8EiOS%E7%B6%B2%E9%A0%81%E8%A6%96%E9%A0%BB%E5%BB%A3%E5%91%8A%EF%BC%8C%E9%80%99%E6%A8%A3%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%B0%A1%E5%96%AE%E5%81%9A%E5%88%B0.html</url>
+      <content type="html"><![CDATA[<p>　　在網頁上看一些視頻的時候，難免會遇到一些視頻廣告。這些長達30秒甚至1分鐘的視頻廣告是挺令人討厭的。那麼怎麼跳過這些煩人的廣告呢？Tin教你一個小技巧。</p>
+<a id="more"></a>
+<h1 id="如何跳過視頻廣告"><a href="#如何跳過視頻廣告" class="headerlink" title="如何跳過視頻廣告"></a>如何跳過視頻廣告</h1><p>其實iOS自帶就有跳過網頁視頻廣告的功能。視頻廣告的長短不一樣，而一般都是由幾個短的廣告拼接而成的。下面就以腾讯視頻為例：<br>1.在視頻廣告播放時，我們進入iOS自帶的控制中心，如圖：<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/uQRnHzj2J6G5nc29t0OlUdUPticNk2E0JxnxOuMicuD3Tib7aVOHSyFqQxcFK6MCibwMma5zfDm2PdqhYpGehC3XZg/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="腾讯視頻"><br>2.重按或者長按控制中心的音樂播放器部件，打開音樂播放界面，如圖：<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/uQRnHzj2J6G5nc29t0OlUdUPticNk2E0JHXIkyicyIXze5rqCoWYZKDE5CMsKuGAhh14rxWkIf1DpomnH1MoZIQw/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="音樂播放界面"><br>3.拖動播放界面的進度條，把進度條拖到最後，如圖：<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/uQRnHzj2J6G5nc29t0OlUdUPticNk2E0J7gy8Ro8P0gJL3OLWQf70pia4DeHmW2iaJMhOMMkn6z9ibL6lsKTL6WBEA/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt="進度條拖到最後"><br>4.回到播放的視頻網頁，發現當前廣告播完了，開始播下一個廣告了如圖：<br><img src="https://mmbiz.qpic.cn/mmbiz_jpg/uQRnHzj2J6G5nc29t0OlUdUPticNk2E0JAeY0XQ9iceBXN0m9U0Cic37LWzpfyYNQBN9IkkeXro2pHLVshl4qsTlQ/640?wx_fmt=jpeg&amp;tp=webp&amp;wxfrom=5&amp;wx_lazy=1" alt=""><br>5.有些長的廣告是由短的廣告拼接而成的，所以我們要重複上面的步驟，多拖幾次進度條，即可以跳過全部廣告了。</p>
+<h1 id="支援-iOS-版本"><a href="#支援-iOS-版本" class="headerlink" title="支援 iOS 版本"></a>支援 iOS 版本</h1><p>實測:</p>
+<ul>
+<li>iphone6 10.2.1</li>
+<li>iphoneX 11.1.2</li>
+</ul>
 ]]></content>
       
         
