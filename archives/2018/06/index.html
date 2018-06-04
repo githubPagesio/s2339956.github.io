@@ -15,18 +15,16 @@
 
 
 
-<meta name="description" content="Python 神奇的 Join 使用">
-<meta name="keywords" content="Python,Array,String">
-<meta property="og:type" content="article">
-<meta property="og:title" content="Python join 語法使用">
-<meta property="og:url" content="http://s2339956.github.io/Python.html">
+<meta name="description" content="哲人無憂，智者常樂。並不是因為所愛的一切他都擁有了，而是所擁有的一切他都愛。">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tin Blog">
+<meta property="og:url" content="http://s2339956.github.io/archives/2018/06/index.html">
 <meta property="og:site_name" content="Tin Blog">
-<meta property="og:description" content="Python 神奇的 Join 使用">
+<meta property="og:description" content="哲人無憂，智者常樂。並不是因為所愛的一切他都擁有了，而是所擁有的一切他都愛。">
 <meta property="og:locale" content="zh-Hant-TW">
-<meta property="og:updated_time" content="2017-11-21T10:01:16.824Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Python join 語法使用">
-<meta name="twitter:description" content="Python 神奇的 Join 使用">
+<meta name="twitter:title" content="Tin Blog">
+<meta name="twitter:description" content="哲人無憂，智者常樂。並不是因為所愛的一切他都擁有了，而是所擁有的一切他都愛。">
 
 <link rel="apple-touch-icon" href= "/apple-touch-icon.png">
 
@@ -58,7 +56,7 @@
 <link href="//cdn.bootcss.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet">
 
 
-<title>Python join 語法使用 | Tin Blog</title>
+<title>Archives: 2018/6 | Tin Blog</title>
 
 <script src="//cdn.bootcss.com/jquery/2.2.4/jquery.min.js"></script>
 <script src="//cdn.bootcss.com/clipboard.js/1.5.10/clipboard.min.js"></script>
@@ -68,8 +66,8 @@
         fancybox: true,
         animate: true,
         isHome: false,
-        isPost: true,
-        isArchive: false,
+        isPost: false,
+        isArchive: true,
         isTag: false,
         isCategory: false,
         fancybox_js: "//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.min.js",
@@ -281,237 +279,52 @@
     </div>
     <link class="menu-list" tags="標籤" friends="友情連結" about="關於我"/>
 </nav>
-      <div class="body-wrap"><article id="post-Python" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap">
   
-    <div class="article-meta">
-      <a href="/Python.html" class="article-date">
-      <time datetime="2017-11-19T11:13:30.000Z" itemprop="datePublished">2017-11-19</time>
+  
+    
+    
+      
+      
+      <section class="archives-wrap">
+        <div class="archive-year-wrap">
+          <a href="/archives/2018" class="archive-year">2018</a>
+        </div>
+        <div class="archives">
+    
+    <article class="archive-article archive-type-post">
+  <div class="archive-article-inner">
+    <header class="archive-article-header">
+          <div class="article-meta">
+              <a href="/跳過iOS網頁視頻廣告，這樣就可以簡單做到.html" class="archive-article-date">
+      <time datetime="2018-06-04T06:15:46.000Z" itemprop="datePublished">06-04</time>
 </a>
 
 
-    </div>
+        </div>
+         
   
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 class="article-title" itemprop="name">
-      Python join 語法使用
+    <h1 itemprop="name">
+      <a class="archive-article-title" href="/跳過iOS網頁視頻廣告，這樣就可以簡單做到.html">跳過iOS網頁視頻廣告，這樣就可以簡單做到</a>
     </h1>
   
 
-      </header>
-      
-      <div class="article-info article-info-post">
-        
-
-        
-    <div class="article-tag tagcloud">
-        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Python/">Python</a></li></ul>
-    </div>
-
-        <div class="clearfix"></div>
-      </div>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
+        <div class="article-info info-on-archive">
           
-        <p>　　Python 神奇的 Join 使用</p>
-<a id="more"></a>
-<p>最近開始嘗試寫 blog, 記錄一些過程<br>但每次都必須要輸入一些指令 生成 部署<br>實在讓我有點煩, 懶惰癌無限擴張<br>自己寫了一個 python 的小軟件<br>讓我只要確認路徑正確, 按下確定, 就能讓它自己完成這些小事情<br>就剛好使用了, 這個方法來打印出相關資訊</p>
-<h3 id="展示一下用法"><a href="#展示一下用法" class="headerlink" title="展示一下用法"></a>展示一下用法</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 為自己 Hexo 的安装路徑</span></span><br><span class="line">hexo_install_folder = self.userinput</span><br><span class="line">target_folder_path = str(hexo_install_folder + <span class="string">'/source/_posts/'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 當前目錄下所有 檔案名稱 是個陣列 Array</span></span><br><span class="line">cur_filename_list = os.listdir(cur_folder_path)</span><br><span class="line">print(cur_filename_list) <span class="comment"># 直接打印 是沒問題的</span></span><br><span class="line"><span class="comment"># label 顯示相關訊息</span></span><br><span class="line">self.displayText[<span class="string">"text"</span>] = <span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> cur_filename_list)</span><br></pre></td></tr></table></figure>
-<h3 id="解釋"><a href="#解釋" class="headerlink" title="解釋"></a>解釋</h3><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 這邊結果會是 例如: 一個空格 加上 名稱</span></span><br><span class="line"><span class="comment">## 具體運作是, 取得 cur_filename_list 每一個內容 轉 String, 然後在前面加上 "空格"</span></span><br><span class="line"><span class="comment">## 再把他們都串起來, 變成一個字串</span></span><br><span class="line"><span class="comment">## 簡單來說 就是</span></span><br><span class="line"><span class="comment">## 返回值</span></span><br><span class="line"><span class="comment">## 回傳通過指定的字串連接陣列中元素後生成的新字串</span></span><br><span class="line"><span class="string">" "</span>.join(str(x) <span class="keyword">for</span> x <span class="keyword">in</span> cur_filename_list)</span><br></pre></td></tr></table></figure>
-<hr>
 
-      
-    </div>
-    
-  </div>
-  
-    
-    <div class="copyright">
-        <p><span>本文標題:</span><a href="/Python.html">Python join 語法使用</a></p>
-        <p><span>文章作者:</span><a href="/" title="回到主頁">Tin</a></p>
-        <p><span>發布時間:</span>2017-11-19, 19:13:30</p>
-        <p><span>最後更新:</span>2017-11-21, 18:01:16</p>
-        <p>
-            <span>原始連結:</span><a class="post-url" href="/Python.html" title="Python join 語法使用">http://s2339956.github.io/Python.html</a>
-            <span class="copy-path" data-clipboard-text="原文: http://s2339956.github.io/Python.html　　作者: Tin" title="點擊複製文章連結"><i class="fa fa-clipboard"></i></span>
-            <script> var clipboard = new Clipboard('.copy-path'); </script>
-        </p>
-        <p>
-            <span>許可協議:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"姓名標示-非商業性-相同方式分享 4.0 國際"</a> 轉載請保留原文連結及作者。
-        </p>
-    </div>
-
-
-
-    <nav id="article-nav">
-        
-            <div id="article-nav-newer" class="article-nav-title">
-                <a href="/2017-11-19-21-37.html">
-                    2017-11-19-21:37
-                </a>
-            </div>
-        
-        
-            <div id="article-nav-older" class="article-nav-title">
-                <a href="/Obj-C-動態取得-Class-屬性名稱-and-屬性質值.html">
-                    Obj-C 動態取得 Class 屬性名稱 and 屬性質值
-                </a>
-            </div>
-        
-    </nav>
-
-  
-</article>
-
-    <div id="toc" class="toc-article">
-        <strong class="toc-title">文章目錄</strong>
-        
-            <ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#展示一下用法"><span class="toc-number">1.</span> <span class="toc-text">展示一下用法</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#解釋"><span class="toc-number">2.</span> <span class="toc-text">解釋</span></a></li></ol>
-        
-    </div>
-    <style>
-        .left-col .switch-btn,
-        .left-col .switch-area {
-            display: none;
-        }
-        .toc-level-3 i,
-        .toc-level-3 ol {
-            display: none !important;
-        }
-    </style>
-
-    <input type="button" id="tocButton" value="隱藏目錄"  title="點擊按鈕隱藏或者顯示文章目錄">
-
-    <script>
-        yiliaConfig.toc = ["隱藏目錄", "顯示目錄", !!"false"];
-    </script>
-
-
-
-    
-<div class="share">
-    
-        <div class="bdsharebuttonbox">
-            <a href="#" class="fa fa-twitter bds_twi" data-cmd="twi" title="分享到推特"></a>
-            <a href="#" class="fa fa-weibo bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a>
-            <a href="#" class="fa fa-qq bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a>
-            <a href="#" class="fa fa-files-o bds_copy" data-cmd="copy" title="复制网址"></a>
-            <a href="#" class="fa fa fa-envelope-o bds_mail" data-cmd="mail" title="通过邮件分享"></a>
-            <a href="#" class="fa fa-weixin bds_weixin" data-cmd="weixin" title="生成文章二维码"></a>
-            <a href="#" class="fa fa-share-alt bds_more" data-cmd="more"></i></a>
+          
         </div>
-        <script>
-            window._bd_share_config={
-                "common":{"bdSnsKey":{},"bdText":"Python join 語法使用　| Tin Blog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
-        </script>
-    
-
-    
-</div>
-
-
-
-
-
-
-
-    
-        <section id="comments">
-    <style> aside.comment-bar { margin: auto 30px; }</style>
-    <div id="disqus_thread"></div>
-    <script>
-        var disqus_config = function(){
-            this.page.url = 'http://s2339956.github.io/Python.html';
-            this.page.identifier = 'Python.html';
-        };
-        var loadComment = function(){
-            var d = document, s = d.createElement('script');
-            s.src = '//s2339956.disqus.com/embed.js';
-            s.setAttribute('data-timestamp', +new Date());
-            (d.head || d.body).appendChild(s);
-        }
-    </script>
-    
-    <aside class="comment-bar">
-        <a href="javascript:void(0);">
-            <i class="fa fa-commenting-o animated infinite pulse"></i>
-            <i class="fa fa-spinner fa-pulse"></i>
-            <span class="count-comment"></span>
-        </a>
-    </aside>
-    <script>
-        var $commentBar = $("#comments aside.comment-bar");
-        var load$hide = function(){
-            $commentBar.find("a > i").toggle();
-            loadComment();
-            $commentBar.fadeOut(800);
-        }
-        $commentBar.click(function(){
-            load$hide();
-        })
-        $commentBar.children("a").hover(function(){
-            load$hide();
-        })
-        if (window.location.hash === "#comments") {
-            load$hide();
-        }
-    </script>
-
-</section>
-
-
-    // Add comment count
-    <script id="dsq-count-scr" src="//s2339956.disqus.com/count.js" async></script>
-    <span class="disqus-comment-count" data-disqus-identifier="Python.html"></span>
-    <span class="disqus-comment-count" data-disqus-url="http://s2339956.github.io/Python.html"></span>
-    <script>
-        $(".disqus-comment-count").hide();
-        var $disqusCount = $(".disqus-comment-count");
-        $disqusCount.bind("DOMNodeInserted", function(e) {
-            $(".count-comment").text(
-                $(this).text().replace(/[^0-9]/ig,"")
-            )
-            DISQUSWIDGETS.getCount({reset: true});
-        })
-    </script>
+        <div class="clearfix"></div>
+    </header>
+  </div>
+</article>
+  
+  
+    </div></section>
+  
 
     
 
-
-
-
-    <div class="scroll" id="post-nav-button">
-        
-            <a href="/2017-11-19-21-37.html" title="上一篇: 2017-11-19-21:37">
-                <i class="fa fa-angle-left"></i>
-            </a>
-        
-
-        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
-
-        
-            <a href="/Obj-C-動態取得-Class-屬性名稱-and-屬性質值.html" title="下一篇: Obj-C 動態取得 Class 屬性名稱 and 屬性質值">
-                <i class="fa fa-angle-right"></i>
-            </a>
-        
-    </div>
-
-    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/跳過iOS網頁視頻廣告，這樣就可以簡單做到.html">跳過iOS網頁視頻廣告，這樣就可以簡單做到</a></li><li class="post-list-item"><a class="post-list-link" href="/Reveal14 使用.html">Reveal 14版 環境搭建</a></li><li class="post-list-item"><a class="post-list-link" href="/Xcode-lldb-小技能.html">Xcode lldb 小技能</a></li><li class="post-list-item"><a class="post-list-link" href="/2017-11-19-21-37.html">2017-11-19-21:37</a></li><li class="post-list-item"><a class="post-list-link" href="/Python.html">Python join 語法使用</a></li><li class="post-list-item"><a class="post-list-link" href="/Obj-C-動態取得-Class-屬性名稱-and-屬性質值.html">Obj-C 動態取得 Class 屬性名稱 and 屬性質值</a></li><li class="post-list-item"><a class="post-list-link" href="/xcode.html">Xcode 中斷點 簡介</a></li><li class="post-list-item"><a class="post-list-link" href="/markdown-table-style.html">Markdown 表格樣式調整與自適應優化</a></li><li class="post-list-item"><a class="post-list-link" href="/常用-Hexo-指令.html">常用 Hexo 指令</a></li></ul>
-
-
-
-
-    <script>
-        
-    </script>
 </div>
       <footer id="footer">
     <div class="outer">
