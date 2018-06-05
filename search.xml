@@ -61,6 +61,12 @@
 ]]></content>
       
         
+        <tags>
+            
+            <tag> iOS </tag>
+            
+        </tags>
+        
     </entry>
     
     <entry>
@@ -74,6 +80,12 @@
 <h1 id="環境搭建"><a href="#環境搭建" class="headerlink" title="環境搭建"></a>環境搭建</h1><p>1.運行 <a href="https://revealapp.com/" target="_blank" rel="external">Reveal</a><br>2.點擊 help -&gt; Show Reveal Library in finder -&gt; iOS Library -&gt; RevealServer.framework, 複製路徑<br>3.複製 RevealServer.framework 至 設備路徑 /Library/Frameworks (ssh 相關使用就不多說了～),<br>scp -r <code>第二點複製的路徑</code> root@<code>192.168.2.X</code>:/Library/Frameworks (高亮的部分需修改)<br>4.到手機設定上, 找到剛安裝的 Reveal2Loader, 選取想讓他裸奔的 App<br>5.就能開始欣賞他裸奔囉 <img src="https://user-gold-cdn.xitu.io/2017/12/14/16052b31b8eb30f4?imageslim" alt="連接運行"></p>
 ]]></content>
       
+        
+        <tags>
+            
+            <tag> iOS </tag>
+            
+        </tags>
         
     </entry>
     
