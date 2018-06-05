@@ -3,6 +3,46 @@
   
     
     <entry>
+      <title><![CDATA[Python 開發必備神器之一：virtualenv]]></title>
+      <url>/Python%20%E9%96%8B%E7%99%BC%E5%BF%85%E5%82%99%E7%A5%9E%E5%99%A8%E4%B9%8B%E4%B8%80%EF%BC%9Avirtualenv.html</url>
+      <content type="html"><![CDATA[<p>　　並獨立出 Python 環境。可使每個項目環境與其他項目獨立開來，保持環境的干淨，解決包衝突問題。</p>
+<a id="more"></a>
+<p>Python的第三方包成千上萬，在一個Python環境下開發時間越久，安裝依賴越多，就越容易出現依賴包衝突的問題。為了解決這個問題，開發者們開發出了 virtualenv，可以搭建虛擬 並獨立的Python環境。這樣就可以使每個項目環境與其他項目獨立開來，保持環境的干淨，解決包衝突問題。</p>
+<h1 id="安裝-virtualenv"><a href="#安裝-virtualenv" class="headerlink" title="安裝 virtualenv"></a>安裝 virtualenv</h1><p>virtualenv 是一個第三方包，是管理虛擬環境的常用方法之一。<br>此外，Python 3 中還自帶了虛擬環境管理包。</p>
+<p>我們可以用的 <code>easy_install</code> 或者 <code>pip</code> 安裝。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install virtualenv</span><br></pre></td></tr></table></figure>
+<h1 id="基本用法"><a href="#基本用法" class="headerlink" title="基本用法"></a>基本用法</h1><h2 id="創建項目的虛擬環境"><a href="#創建項目的虛擬環境" class="headerlink" title="創建項目的虛擬環境"></a>創建項目的虛擬環境</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">$ cd my_project_folder</span><br><span class="line">$ virtualenv venv <span class="comment"># venv 可替換為别的虛擬環境名稱</span></span><br></pre></td></tr></table></figure>
+<p>執行後，在本地會生成一個與虛擬環境同名的文件夾，包含 Python 可執行文件和 pip 庫的拷貝，可用於安裝其他包。</p>
+<p>但是默認情況下，虛擬環境中不會包含也無法使用系統環境的<code>global site-packages</code>。比如係統環境里安裝了請求<code>requests</code>，在虛擬環境裡<code>import requests</code>會提示 ImportError。如果想使用系統環境的第三方軟件包，可以在創建虛擬環境時使用參數<code>–system-site-packages</code>。</p>
+<p><code>virtualenv --system-site-packages venv</code></p>
+<p>另外，你還可以自己指定虛擬環境所使用的 Python 版本，但前提是系统中已經安裝了該版本：</p>
+<p><code>virtualenv -p /usr/bin/python2.7 venv</code></p>
+<h2 id="使用虛擬環境"><a href="#使用虛擬環境" class="headerlink" title="使用虛擬環境"></a>使用虛擬環境</h2><p>進入虛擬環境目錄，啟動虛擬環境。</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$ cd venv</span><br><span class="line">$ source bin/activate <span class="comment"># Windows 系統下運行 Scripts\</span></span><br><span class="line">$ python -V</span><br></pre></td></tr></table></figure>
+<p>如果未對命令行進行個性化，此時命令行前面應該會多出一個括號，括號裡為虛擬環境的名稱。啟動虛擬環境後安裝的所有模塊都會安裝到該虛擬環境目錄裡。</p>
+<p>退出虛擬環境：</p>
+<figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ deactivate</span><br></pre></td></tr></table></figure>
+<p>如果項目開發完成後想刪除虛擬環境，直接刪除虛擬環境目錄即可。</p>
+<h1 id="使用-virtualenvwrapper"><a href="#使用-virtualenvwrapper" class="headerlink" title="使用 virtualenvwrapper"></a>使用 virtualenvwrapper</h1><p>上述 virtualenv 的操作其實已經夠簡單了，但對於開發者來說還是不夠簡便，所以便有了 virtualenvwrapper 。這是 virtualenv 的擴展工具，提供了一系列命令行命令，可以方便地創建，刪除，複製，切換不同的虛擬環境。同時，使用該擴展後，所有虛擬環境都會被放置在同一個目錄下。</p>
+<h2 id="安装-virtualenvwrapper"><a href="#安装-virtualenvwrapper" class="headerlink" title="安装 virtualenvwrapper"></a>安装 virtualenvwrapper</h2><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ pip install virtualenvwrapper</span><br></pre></td></tr></table></figure>
+<h2 id="設置環境參數"><a href="#設置環境參數" class="headerlink" title="設置環境參數"></a>設置環境參數</h2><p>把下面兩行添加到 <code>~/.bashrc（或者~/.zshrc）</code> 裡。<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> [ -f /usr/local/bin/virtualenvwrapper.sh ]; then</span><br><span class="line">   export WORKON_HOME=$HOME/.virtualenvs</span><br><span class="line">   source /usr/local/bin/virtualenvwrapper.sh</span><br><span class="line">fi</span><br></pre></td></tr></table></figure></p>
+<p>其中，<code>.virtualenvs</code> 是可以自定義的虛擬環境管理目錄。</p>
+<p>然後執行：<code>source ~/.bashrc</code>，就可以使用 virtualenvwrapper 了。Windows 安裝過程，請参考<a href="http://virtualenvwrapper.readthedocs.io/en/latest/install.html" target="_blank" rel="external">官方文件</a>。</p>
+<h2 id="使用方法"><a href="#使用方法" class="headerlink" title="使用方法"></a>使用方法</h2><p>創建虛擬環境：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ mkvirtualenv venv</span><br></pre></td></tr></table></figure></p>
+<p>注意：mkvirtualenv 也可以使用 virtualenv 的參數，比如 –python 來指定 Python 版本。創建虛擬環境後，會自動切換到此虛擬環境裡。虛擬環境目錄都在 WORKON_HOME 裡。</p>
+<p>其他命令如下：<br><figure class="highlight python"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">lsvirtualenv -b <span class="comment"># 列出虛擬環境</span></span><br><span class="line"></span><br><span class="line">workon [環境名稱] <span class="comment"># 切換虛擬環境</span></span><br><span class="line"></span><br><span class="line">lssitepackages <span class="comment"># 查看環境中安装了哪些包</span></span><br><span class="line"></span><br><span class="line">cdvirtualenv [子目錄名] <span class="comment"># 進入當前環境的目錄</span></span><br><span class="line"></span><br><span class="line">cpvirtualenv [source] [dest] <span class="comment"># 複製虛擬環境</span></span><br><span class="line"></span><br><span class="line">deactivate <span class="comment"># 退出虛擬環境</span></span><br><span class="line"></span><br><span class="line">rmvirtualenv [環境名稱] <span class="comment"># 刪除虛擬環境</span></span><br></pre></td></tr></table></figure></p>
+]]></content>
+      
+        
+        <tags>
+            
+            <tag> Python </tag>
+            
+        </tags>
+        
+    </entry>
+    
+    <entry>
       <title><![CDATA[跳過iOS網頁視頻廣告，這樣就可以簡單做到]]></title>
       <url>/%E8%B7%B3%E9%81%8EiOS%E7%B6%B2%E9%A0%81%E8%A6%96%E9%A0%BB%E5%BB%A3%E5%91%8A%EF%BC%8C%E9%80%99%E6%A8%A3%E5%B0%B1%E5%8F%AF%E4%BB%A5%E7%B0%A1%E5%96%AE%E5%81%9A%E5%88%B0.html</url>
       <content type="html"><![CDATA[<p>　　在網頁上看一些視頻的時候，難免會遇到一些視頻廣告。這些長達30秒甚至1分鐘的視頻廣告是挺令人討厭的。那麼怎麼跳過這些煩人的廣告呢？Tin教你一個小技巧。</p>
